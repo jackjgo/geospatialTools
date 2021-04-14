@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Read GPS coordinates from exif
+Read GPS coordinates from exif as decimal degrees
+This works, at least on GoPro Hero8 images
 """
 
 import exifread
