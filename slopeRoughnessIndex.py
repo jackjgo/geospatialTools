@@ -3,9 +3,9 @@ Calculates surface rougness based on slope standard deviation
 
 Many rougness metrics are based on elevation differences. This could lead to a 
 flat, sloped area being considered rough, while a surface with many small 
-elevation changes (like very coarse sandpaper) woul be smooth. Is this really
-what roughness means. Instead I'm interested in deriving roughness from
-slope standard deviation
+elevation changes (like very coarse sandpaper) would be smooth. Is this really
+what roughness means? Instead I'm interested in deriving roughness from
+slope standard deviation.
 
 """
 
