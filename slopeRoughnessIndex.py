@@ -3,9 +3,9 @@ Calculates surface rougness based on slope standard deviation
 
 Many rougness metrics are based on elevation differences. This could lead to a 
 flat, sloped area being considered rough, while a surface with many small 
-elevation changes (like very coarse sandpaper) would be smooth. Is this really
-what roughness means? Instead I'm interested in deriving roughness from
-slope standard deviation.
+elevation changes (like very coarse sandpaper) woul be smooth. Is this really
+what roughness means. Instead I'm interested in deriving roughness from
+slope standard deviation
 
 """
 
@@ -23,7 +23,9 @@ def slope_stdev(dem, neighborhood=3):
     slopeMean = ndimage.uniform_filter(slope,(neighborhood, neighborhood))
     slopeSqrMean = ndimage.uniform_filter(slope**2,(neighborhood,neighborhood))
     slopeVar = slopeSqrMean - slopeMean**2
-    slopeStdev = np.sqrt(np.absolute(slopeVar))
+    slopeStdev = np.sqrt(np.absolute(slopeVar)) #In perfectly flat areas where
+    #variance is ideally zero, float precision can result in a number slightly
+    #below zero. Using the absolute value of variance prevents nonreal results
     return slopeStdev
 
 def slope_roughness(input_path, output_path, neighborhood=3, interpMethod='linear'):
