@@ -9,6 +9,9 @@ height for each point.
 Check out the calculator at
 https://www.unavco.org/software/geodetic-utilities/geoid-height-calculator/geoid-height-calculator.html
 
+As of 8/18/21, the calculator has changed. This function won't work, but the new format
+allows you to submit the inputs and save results via csv directly on the web page.
+
 @author: jckgn
 """
 
